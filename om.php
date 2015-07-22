@@ -1,5 +1,8 @@
 <?php
 
+require('./vendor/autoload.php');
+
+
 function processSObject($pSObject) {
 	$id 			= $pSObject->Id;
 	debug("Inbound Message from SFDC: ID: $id");
