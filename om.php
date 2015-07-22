@@ -40,9 +40,14 @@ function debug($s) {
   fclose($stdout);
 }
 
+debug('starting om notification processing');
+
 // MAIN LOADER /////////////////////////////////////////
 //load specific wsdl for outbound message handler
 $server = new SoapServer("./wsdl/om.wsdl.xml");		 
 $server->addFunction("notifications");
 $server->handle();  
+
+debug('end of om notification processing');
+
 ?>
