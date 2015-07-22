@@ -2,10 +2,12 @@
 
 function processSObject($pSObject) {
 	$id 			= $pSObject->Id;
-	echo "Inbound Message from SFDC: ID: $id";
+	debug("Inbound Message from SFDC: ID: $id");
   
   //do something
-  print_r($pSObject);
+  $s = print_r($pSObject, true);
+
+  debug($s);
 
 }
 
@@ -14,7 +16,9 @@ function ack($value) {
 }
 
 function notifications($data) {	
-	//multiple notifications
+  debug('incoming!!!');
+
+  //multiple notifications
 	if (is_array($data->Notification)) {
 	    $result = array();
 	    for ($i = 0; $i < count($data->Notification); $i++) {
@@ -28,6 +32,12 @@ function notifications($data) {
     	processSObject($data->Notification->sObject);
     	return ack(true);
   	}
+}
+
+function debug($s) {
+  $stdout = fopen('php://stdout', 'w');
+  fwrite($stdout, $s);
+  fclose($stdout);
 }
 
 // MAIN LOADER /////////////////////////////////////////
