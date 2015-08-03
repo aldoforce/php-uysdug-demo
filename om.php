@@ -17,7 +17,7 @@ function ack($value) {
 }
 
 function notifications($data) {	
-  debug("notification: ".$data->Notification);
+  debug("notification: ". $data);
 
   //multiple notifications
 	if (is_array($data->Notification)) {
