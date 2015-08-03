@@ -4,7 +4,6 @@
 
 function processSObject($pSObject) {
 	$id 			= $pSObject->Id;
-	debug("Inbound Message from SFDC: ID: $id");
   
   //do something
   $s = print_r($pSObject, true);
@@ -18,7 +17,7 @@ function ack($value) {
 }
 
 function notifications($data) {	
-  debug('incoming!!!');
+  debug("notification: ".$data->Notification);
 
   //multiple notifications
 	if (is_array($data->Notification)) {
@@ -42,14 +41,12 @@ function debug($s) {
   fclose($stdout);
 }
 
-debug('starting om notification processing');
-
 // MAIN LOADER /////////////////////////////////////////
 //load specific wsdl for outbound message handler
 $server = new SoapServer("./wsdl/om.wsdl.xml");		 
 $server->addFunction("notifications");
 $server->handle();  
 
-debug('end of om notification processing');
+debug('huzzah!');
 
 ?>
