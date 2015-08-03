@@ -16,8 +16,10 @@ function ack($value) {
 	return array('Ack' => $value);
 }
 
-function notifications($data) {	
-  debug("notification: ". $data);
+function notifications($data) {
+  $n = (array) $data;
+
+  debug("notification: ". print_f($n, true) );
 
   //multiple notifications
 	if (is_array($data->Notification)) {
