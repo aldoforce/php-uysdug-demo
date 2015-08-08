@@ -1,0 +1,25 @@
+7666+00:00 heroku[router]: at=info method=POST path="/om.php" host=php-uysdug-demo.herokuapp.com request_id=8c4cfc3d-67de-4cea-ab74-c6a46e1e1005 fwd="96.43.150.8" dyno=web.1 connect=1ms service=10ms status=200 bytes=490
+3528+00:00 app[web.1]: payload: Array
+3709+00:00 app[web.1]: (
+3941+00:00 app[web.1]:     [OrganizationId] => 00Dj00000029X9REAU
+4179+00:00 app[web.1]:     [ActionId] => 04kj0000000TSXuAAO
+4640+00:00 app[web.1]:     [SessionId] => 00Dj00000029X9R!AQ8AQGz19.B1jCH8I4vWDCXEhpbn30ncRwU251XD96bfY5UnoF4YAKkUwkfu8RIC0ggeHkJQCG10gfFh1zprVooHLAHAb55M
+4976+00:00 app[web.1]:     [EnterpriseUrl] => https://na16.salesforce.com/services/Soap/c/34.0/00Dj00000029X9R
+5411+00:00 app[web.1]:     [PartnerUrl] => https://na16.salesforce.com/services/Soap/u/34.0/00Dj00000029X9R
+5635+00:00 app[web.1]:     [Notification] => stdClass Object
+5813+00:00 app[web.1]:         (
+6059+00:00 app[web.1]:             [Id] => 04lj0000002kHqsAAE
+6300+00:00 app[web.1]:             [sObject] => stdClass Object
+6490+00:00 app[web.1]:                 (
+6746+00:00 app[web.1]:                     [Id] => 006j000000KbBElAAN
+7021+00:00 app[web.1]:                     [AccountId] => 001j000000WluN0AAJ
+7254+00:00 app[web.1]:                     [Amount] => 3332
+7500+00:00 app[web.1]:                     [Name] => Camisetas PHPday
+7747+00:00 app[web.1]:                     [StageName] => Closed Won
+7974+00:00 app[web.1]:                 )
+8110+00:00 app[web.1]:
+8293+00:00 app[web.1]:         )
+8451+00:00 app[web.1]:
+8624+00:00 app[web.1]: )
+8790+00:00 app[web.1]: huzzah!
+9026+00:00 app[web.1]: 10.33.158.66 - - [08/Aug/2015:07:30:09 +0000] "POST /om.php HTTP/1.1" 200 299 "-" "Jakarta Commons-HttpClient/3.1
