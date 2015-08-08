@@ -74,7 +74,6 @@ function init($data) {
   return $response;   
 }
 
-
 // MAIN LOADER 
 //load specific wsdl for outbound message handler
 $server = new SoapServer("./wsdl/opp.wsdl.xml");		 
