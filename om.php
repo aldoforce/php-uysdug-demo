@@ -50,7 +50,7 @@ function notifications($data) {
 
 // MAIN LOADER 
 //load specific wsdl for outbound message handler
-$server = new SoapServer("./wsdl/om.wsdl.xml");		 
+$server = new SoapServer("./wsdl/opp.wsdl.xml");		 
 $server->addFunction("notifications");
 $server->handle();  
 
