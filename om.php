@@ -8,7 +8,7 @@ function debug($s) {
   fclose($stdout);
 }
 
-//process an sobject
+//process a notification
 function process_notification($pNotification) {
 	$result = true;
 
