@@ -67,7 +67,7 @@ function init($data) {
 	//single notification
 	else {  	
   	$response = ack(
-                  process_notification($data->Notification);
+                  process_notification($data->Notification)
                 );
 	}
 
