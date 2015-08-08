@@ -14,9 +14,9 @@ function processSObject($pSObject) {
 	$id 			= $pSObject->Id;
     
   //do something
-  $s = print_r($pSObject, true);
+  // $s = print_r($pSObject, true);
 
-  debug($s);
+  // debug($s);
 
 }
 
