@@ -44,7 +44,7 @@ function is_already_processed($n) {
 }
 
 //process notifications
-function init_handler($data) {
+function notifications($data) {
   //debug
   $n = (array) $data;
   debug("payload: ". print_r($n, true) );
@@ -77,7 +77,7 @@ function init_handler($data) {
 // MAIN LOADER 
 //load specific wsdl for outbound message handler
 $server = new SoapServer("./wsdl/opp.wsdl.xml");		 
-$server->addFunction("init_handler");
+$server->addFunction("notifications");
 $server->handle();  
 
 debug('huzzah!');
